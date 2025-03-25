@@ -254,7 +254,7 @@ pico_add_extra_outputs(NOMEDOPROJETO)
 * Selecione a opção: `Configure CMake`
 <img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142244.png?raw=true" alt="">
 
-* Código de Exemplo feito pelo ()[]
+* Código de Exemplo feito pelo **[SwagMessiah02](https://github.com/SwagMessiah02/freertostest/blob/main/freertostest.c)**
 ```c
 #include "pico/stdlib.h"
 #include "FreeRTOS.h"
