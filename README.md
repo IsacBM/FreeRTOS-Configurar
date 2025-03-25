@@ -1,7 +1,7 @@
 # FreeRTOS-Configurar
 > Aprendizagem...
 
-## Instalação do FreeRTOS
+## Instalação do FreeRTOS e Criação do Projeto 
 
 ### Passo 1: Baixar FreeRTOS.
 Link: https://github.com/FreeRTOS/FreeRTOS/releases/download/202212.01/FreeRTOSv202212.01.zip
