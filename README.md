@@ -28,6 +28,7 @@ C:\FreeRTOSv202212.01\FreeRTOS\Source
 ### Passo 6: Criar o Projeto no VsCode:
 
 <img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20143016.png?raw=true" alt="Criando o Projeto">
+* Versão do SDK testada: v1.5.1
 
 ### Passo 7: Editar o `CMakeLists.txt`
 * ATENÇÂO: Substitua o `NOMEDOPROJETO` pelo nome do seu projeto/arquivo.
@@ -252,7 +253,7 @@ pico_add_extra_outputs(NOMEDOPROJETO)
 * Selecione a opção: `Configure CMake`
 <img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142244.png?raw=true" alt="">
 
-* Código de Exemplo feito pelo Fulano
+* Código de Exemplo feito pelo ()[]
 ```c
 #include "pico/stdlib.h"
 #include "FreeRTOS.h"
