@@ -7,13 +7,13 @@
 Link: https://github.com/FreeRTOS/FreeRTOS/releases/download/202212.01/FreeRTOSv202212.01.zip
 
 ### Passo 2: Descompactem o arquivo Zip.
-### Passo 3: Mova a pasta para um diretorio de confiança, 
-*  por exemplo: O Disco Local C(C:\)
+### Passo 3: Mova a pasta para um diretorio de confiança,
+*  Por exemplo: O Disco Local C(C:\)
 ```
 C:\FreeRTOSv202212.01\FreeRTOS\Source
 ```
-
-<img src="" alt="">
+* Copiar endereço:
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Endereco.png?raw=true" alt="">
 
 ### Passo 4: Cópiar o Endereço.
 *  Entre na pasta `\FreeRTOSv202212.01`, depois na pasta `\FreeRTOS` e logo em seguida na pasta `\Source`
