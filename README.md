@@ -27,7 +27,10 @@ C:\FreeRTOSv202212.01\FreeRTOS\Source
 
 ### Passo 6: Criar o Projeto no VsCode:
 
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20143016.png?raw=true" alt="Criando o Projeto">
+
 ### Passo 7: Editar o `CMakeLists.txt`
+* ATENÇÂO: Substitua o `NOMEDOPROJETO` pelo nome do seu projeto/arquivo.
 ```
 # Generated Cmake Pico project file
 cmake_minimum_required(VERSION 3.13)
@@ -60,29 +63,29 @@ include(pico_sdk_import.cmake)
 
 include($ENV{FREERTOS_KERNEL_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.cmake)
 
-project(freertostest C CXX ASM)
+project(NOMEDOPROJETO C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(freertostest freertostest.c)
+add_executable(NOMEDOPROJETO NOMEDOPROJETO.c)
 
-pico_set_program_name(freertostest "freertostest")
-pico_set_program_version(freertostest "0.1")
+pico_set_program_name(NOMEDOPROJETO "NOMEDOPROJETO")
+pico_set_program_version(NOMEDOPROJETO "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(freertostest 0)
-pico_enable_stdio_usb(freertostest 1)
+pico_enable_stdio_uart(NOMEDOPROJETO 0)
+pico_enable_stdio_usb(NOMEDOPROJETO 1)
 
 # Add the standard include files to the build
-target_include_directories(freertostest PRIVATE ${CMAKE_CURRENT_LIST_DIR})
+target_include_directories(NOMEDOPROJETO PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
 # Add any user requested libraries
-target_link_libraries(freertostest pico_stdlib hardware_gpio pico_multicore FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
+target_link_libraries(NOMEDOPROJETO pico_stdlib hardware_gpio pico_multicore FreeRTOS-Kernel FreeRTOS-Kernel-Heap4)
 
-pico_add_extra_outputs(freertostest)
+pico_add_extra_outputs(NOMEDOPROJETO)
 
 ```
 
@@ -238,7 +241,17 @@ pico_add_extra_outputs(freertostest)
  
 ```
 
-### Passo 9: Testar.
+### Passo 9: Testar o Projeto.
+
+* Selecionar arquivos da Pasta build:
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142347.png?raw=true" alt="">
+* Apagar Arquivos do BUILD:
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142400.png?raw=true" alt="">
+* Vá até a extensão da Raspberry:
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142303.png?raw=true" alt="">
+* Selecione a opção: `Configure CMake`
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20142244.png?raw=true" alt="">
+
 * Código de Exemplo feito pelo Fulano
 ```c
 #include "pico/stdlib.h"
@@ -248,32 +261,22 @@ pico_add_extra_outputs(freertostest)
 
 const uint led_pin_red = 12;
 
-void vBlinkTask()
-{
+void vBlinkTask(){
     for(;;)
     {
         gpio_put(led_pin_red, 1);
-
         vTaskDelay(250);
-
         gpio_put(led_pin_red, 0);
-
         vTaskDelay(250);
-
         printf("Blinking\n");
     }
 }
 
-int main()
-{
+int main(){
     stdio_init_all();
-
     gpio_init(led_pin_red);
-
     gpio_set_dir(led_pin_red, GPIO_OUT);
-
     xTaskCreate(vBlinkTask, "Blink Task", 128, NULL, 1, NULL);
-
     vTaskStartScheduler();
 }
 
