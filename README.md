@@ -19,11 +19,12 @@ C:\FreeRTOSv202212.01\FreeRTOS\Source
 <img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Endereco.png?raw=true" alt="Cópiar Endereço">
 
 ### Passo 5: Criar Variável de Ambiente.
-* Digite o seguinte comando no Powershell:
+* Digite o seguinte comando no Powershell(administrador):
 
 ```cmd
 [System.Environment]::SetEnvironmentVariable("FREERTOS_KERNEL_PATH", "C:\FreeRTOSv202212.01\FreeRTOS\Source", "Machine")
 ```
+* Se não aparecer nenhuma mensagem de erro tá de boas...
 
 ### Passo 6: Criar o Projeto no VsCode:
 
