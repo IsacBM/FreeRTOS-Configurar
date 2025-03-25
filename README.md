@@ -12,12 +12,11 @@ Link: https://github.com/FreeRTOS/FreeRTOS/releases/download/202212.01/FreeRTOSv
 ```
 C:\FreeRTOSv202212.01\FreeRTOS\Source
 ```
-* Copiar endereço:
-<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Endereco.png?raw=true" alt="">
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Captura%20de%20tela%202025-03-25%20140953.png?raw=true" alt="Disco Local C">
 
 ### Passo 4: Cópiar o Endereço.
 *  Entre na pasta `\FreeRTOSv202212.01`, depois na pasta `\FreeRTOS` e logo em seguida na pasta `\Source`
-<img src="" alt="">
+<img src="https://github.com/IsacBM/FreeRTOS-Configurar/blob/main/img/Endereco.png?raw=true" alt="Cópiar Endereço">
 
 ### Passo 5: Criar Variável de Ambiente.
 * Digite o seguinte comando no Powershell:
